@@ -1,0 +1,8 @@
+function solve(arr){
+    let num = 1;
+    let sortedArr = arr.sort((a,b) => a.localeCompare(b));
+    for(let i = 0; i < sortedArr.length; i++){
+        sortedArr[i] = (i + 1).toString()+'.'+sortedArr[i];
+    }
+    return sortedArr.join('\n');
+}
