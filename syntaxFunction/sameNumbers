@@ -1,0 +1,12 @@
+function solve(count){
+    let result = count.toString();
+    let isSame = true;
+    let sum = 0;
+    for(let i = 0; i < result.length; i++){
+        if(result[i] !== result[i +1] && result[i + 1] !== undefined){
+            isSame = false;
+        }
+        sum += Number(result[i]);
+    }
+    return `${isSame}\n${sum}`;
+}
