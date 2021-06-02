@@ -1,0 +1,29 @@
+function solve(num, param1, param2, param3, param4, param5){
+    let number = Number(num);
+    const arr = [param1, param2, param3, param4, param5];
+
+    for(let i = 0; i < arr.length; i++){
+        switch(arr[i]){
+            case 'chop':
+                number /= 2;
+                console.log(number);
+                break;
+                case 'dice':
+                   number = Math.sqrt(number);
+                   console.log(number);
+                   break;
+                   case 'spice':
+                       number++;
+                       console.log(number);
+                       break;
+                       case 'bake':
+                           number *= 3;
+                           console.log(number);
+                           break;
+                           case 'fillet':
+                               number -= number * 0.20;
+                               console.log(number);
+                               break;
+        }
+    }
+}
