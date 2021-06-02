@@ -1,0 +1,20 @@
+function solve(command){
+    let sum = [];
+    let number  = 1;
+for(let i = 0; i < command.length; i++){
+    if(command[i] == 'add'){
+        sum.push(number);
+    }
+    else{
+        sum.pop();
+    }
+    number++;
+}
+
+if(sum.length == 0){
+    return 'Empty';
+}
+else{
+    return sum.join('\n');
+}
+}
