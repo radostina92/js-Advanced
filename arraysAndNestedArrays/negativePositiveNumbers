@@ -1,0 +1,12 @@
+function solve(num){
+let number = [];
+for(i = 0; i < num.length; i++){
+    let chislo = num[i];
+    if(chislo < 0){
+        number.unshift(chislo);
+    }else{
+        number.push(chislo);
+    }
+}
+return number;
+}
