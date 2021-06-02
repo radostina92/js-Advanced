@@ -1,0 +1,12 @@
+function solve(numbers){
+    if(numbers.length % 2 == 0){
+        numbers.sort((a,b) => b-a).splice(numbers.length / 2);
+    }
+    else
+    {
+        numbers.sort((a,b) => b-a).splice(numbers.length / 2 + 1);
+    }
+ 
+    numbers.reverse();
+    return numbers;
+}
