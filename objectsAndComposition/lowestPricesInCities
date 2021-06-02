@@ -1,0 +1,21 @@
+function solve(input){
+    let storage = {};
+   while(input.length){
+    let entry = input.shift();
+    let [town, productName, price] = entry.split(' | ');
+    if(!storage[productName]){
+        storage[productName] = {town, price: Number(price)};
+    }else{
+        storage[productName] = storage[productName].price <= Number(price) ? storage[productName] : {town, price: Number(price)};
+    }
+    
+    }
+
+    let result = [];
+    for(const product in storage){
+        result.push(`${product} -> ${storage[product].price} (${storage[product].town})`);
+    }
+
+   return result.join('\n');
+
+}
