@@ -1,0 +1,23 @@
+function solve(arr){
+    let rowSums = [];
+    let colSums = [];
+    for(let i = 0; i < arr.length; i++){
+        let row = arr[i];
+        let sum = row.reduce((a,b) => (a + b), 0);
+        rowSums.push(sum);
+    }
+
+    for(let i = 0; i < arr.length; i++){
+        let col = [];
+        for(let j = 0; j < arr.length; j++){
+            let index = arr.length - 1 - j;
+            col.push(arr[index][i]);
+            
+        }
+       
+        let sum = col.reduce((a,b) => (a + b), 0);
+        colSums.push(sum);
+    }
+
+    return rowSums.concat(colSums).every((el, i, arr )=> el === arr[0]);
+}
