@@ -1,0 +1,8 @@
+function solve(numbers){
+    let num = [];
+    for(let i = 1; i < numbers.length; i+= 2){
+        num.push(numbers[i] * 2);
+    }
+    num.reverse();
+    return num.join(" ");
+}
