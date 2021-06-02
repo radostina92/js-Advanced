@@ -1,0 +1,8 @@
+function solve(numbers){
+    let arr = {};
+    for(let i = 0; i < numbers.length; i+=2){
+       arr[numbers[i]] = Number(numbers[i + 1]);
+       
+    }
+    return arr;
+}
