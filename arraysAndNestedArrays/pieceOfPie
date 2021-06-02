@@ -1,0 +1,9 @@
+function solve(arr, first, last){
+    let array = [];
+    let firstIndex = arr.indexOf(first);
+    let lastIndex = arr.indexOf(last);
+    for(let i = firstIndex; i <= lastIndex; i++){
+        array.push(arr[i]);
+    }
+    return array;
+}
